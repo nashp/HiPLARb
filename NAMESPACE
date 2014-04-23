@@ -1,0 +1,2 @@
+useDynLib(HiPLARb)
+exportPattern("^[[:alpha:]]+")

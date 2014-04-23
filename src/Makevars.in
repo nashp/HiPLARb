@@ -1,0 +1,15 @@
+PKG_CFLAGS = @CFLAGS@
+PKG_LIBS = @LD_FLAGS@ @LIBS@
+
+MkInclude = $(R_HOME)/etc${R_ARCH}/Makeconf
+
+H_OBJS = hiplar.o hiplar_init.o hiplar_at.o hiplar_matprod.o
+P_OBJS = plasma_wrapper.o plasma_wrapper_init.o P.o plasma_matprod.o
+M_OBJS = magma_wrapper.o magma_wrapper_init.o magma_matprod.o
+OBJS = util.o $(P_OBJS) $(M_OBJS) $(H_OBJS)
+
+all: $(SHLIB)
+$(SHLIB): $(OBJS)
+
+clean:
+	rm -rf $(OBJS) HiPLARb.so

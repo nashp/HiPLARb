@@ -1,0 +1,12 @@
+Package: HiPLARb
+Type: Package
+Title: High Performance Linear Algebra in R base
+Version: 0.1.4
+Date: 2013-01-30
+Author: Vendel Szeremi
+Maintainer: Giovanni Montana <g.montana@imperial.ac.uk>
+Description: This package provides multi-core CPU and GPU support for linear algebra in R by overriding functions in the R base library and the R evaluator with modified versions that use the PLASMA and MAGMA libraries.
+License: GPL (>=2)
+Depends: R (>= 2.15.2), methods
+URL: http://www.hiplar.org
+Packaged: 2014-01-16 09:02:47 UTC; testuser
